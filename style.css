@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),  url("Images/bg4.jpg")  no-repeat center center/cover;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.heading {
+    margin: 32px auto;
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+}
+
+.image {
+    width: 55px;
+    height: 55px;
+    margin-top: 8px;
+}
+
+#text
+{
+    margin: 0;
+}
+
+.box
+{
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    transform: scale(1);
+  }
+
+.circle {
+    background:  url("Images/circle.webp") no-repeat center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gradient-circle {
+    background: conic-gradient(
+      #30cbffa8 0%,
+      #30cbffa8 25%,
+      #ff9d00a8 25%,
+      #ff9d00a8 50%,
+      #00ffffa8  50%,
+      #00ffffa8  75%,
+      #ff8000a8 75%,
+      #ff8000a8 100%
+    );
+    height: 320px;
+    width: 320px;
+    z-index: -2;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+  }
+
+  .pointer-container
+  {
+      position: absolute;
+      top: -48px;
+      left: 146px;
+      width:1px;
+      height: 200px;
+      animation: rotate 12s linear forwards infinite;
+      transform-origin: bottom center;
+  }
+
+  .pointer
+  {
+      display: block;
+      background: whitesmoke;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+  }
+
+  .container.grow 
+  {
+      animation: grow 3s linear forwards;
+  }
+
+  .container.shrink 
+  {
+      animation: shrink 3s linear forwards;
+  }
+
+  @keyframes rotate 
+  {
+        from
+        {
+            transform: rotate(0deg);
+        }   
+        
+        to 
+        {
+            transform: rotate(360deg) ;
+        }
+  }
+
+  @keyframes grow 
+  {
+        from
+        {
+            transform: scale(1);
+        }   
+        
+        to 
+        {
+            transform: scale(1.2);
+        }
+  }
+
+  @keyframes shrink 
+  {
+        from
+        {
+            transform: scale(1.2);
+        }   
+        
+        to 
+        {
+            transform: scale(1);
+        }
+  }
+  
+  @media screen and (max-device-width: 480px)
+   
+  {
+    .box
+    {
+        transform: scale(0.9);
+    }     
+  }
